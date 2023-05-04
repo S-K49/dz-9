@@ -21,4 +21,23 @@ public class Group {
         System.out.println(Arrays.toString(students.toArray()));
     }
 
+    public void removeStudent(int ID, String name, String surname) {
+        Student student = new Student(ID, name, surname);
+        students.remove(student);
+        System.out.println(Arrays.toString(students.toArray()));
+    }
+
+    public void renameStudent(int ID, String name, String surname) {
+
+        Student student = new Student(ID, name, surname);
+        student.setFirstName(name);
+        student.setLastName(surname);
+        System.out.println(Arrays.toString(students.toArray()));
+
+    }
+
+    public void addTask(String task) {
+        tasks.add(task);
+    }
+
 }

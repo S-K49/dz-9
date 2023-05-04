@@ -5,6 +5,12 @@ public class Main {
 
         group.addStudent(123,"Name 1","Surname 1");
         group.addStudent(222,"Name 2","Surname 2");
+
+        group.removeStudent(123, "Name 1", "Surname 1");
+
+        if(group.students.contains(123)){
+            group.renameStudent(11, "name 4", "surname 4");
+        }
     }
 
 }

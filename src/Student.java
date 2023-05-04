@@ -22,4 +22,12 @@ public class Student {
         this.surname = surname;
     }
 
+    public void setFirstName(String firstName) {
+        this.name = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.surname = lastName;
+    }
+
 }
