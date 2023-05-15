@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 public class Group {
@@ -45,11 +46,15 @@ public class Group {
 
     public void markTaskAsDone() {
         boolean isDone = true;
-        for(Student one : students) {
-            if(one.getName().contains("Name 2")) {
-                System.out.println("Task is done: " + isDone);
+        HashMap<Student, Boolean> myMap = new HashMap<>();
+        for (Student anotherStudent : students) {
+            if (anotherStudent.getName().contains("Name 2")) {
+                myMap.put(anotherStudent, isDone);
+            } else {
+                myMap.put(anotherStudent, false);
             }
-        }
+            System.out.println(myMap);
     }
 
+    }
 }
