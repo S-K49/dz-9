@@ -12,7 +12,9 @@ public class Group {
 
     public void setHead(int ID, String name, String surname) {
         this.head = new Student(ID, name, surname);
-        System.out.println(this.head);
+        System.out.println(this.head.getId());
+        System.out.println(this.head.getName());
+        System.out.println(this.head.getSurname());
     }
 
     public void addStudent(int ID, String name, String surname) {
@@ -38,6 +40,16 @@ public class Group {
 
     public void addTask(String task) {
         tasks.add(task);
+        System.out.println(task);
+    }
+
+    public void markTaskAsDone() {
+        boolean isDone = true;
+        for(Student one : students) {
+            if(one.getName().contains("Name 2")) {
+                System.out.println("Task is done: " + isDone);
+            }
+        }
     }
 
 }
